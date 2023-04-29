@@ -1,0 +1,35 @@
+body {
+	margin: 0 64px;
+	font-family: sans-serif;
+}
+
+h1 {
+	color: green;
+}
+
+ul {
+	width: 400px;
+	list-style: none;
+	padding: 0;
+}
+
+.messages li {
+	border-bottom: 2px solid #224;
+	margin-bottom: 32px;
+}
+
+.form-fields li {
+	display: grid;
+	grid-template-columns: 100px 200px;
+	margin-bottom: 32px;
+}
+
+a {
+	color: #224;
+	font-weight: 600;
+	display: inline-block;
+	text-decoration: none;
+	padding: 16px;
+	margin: 16px 16px 16px 0;
+	border: 2px dotted #222;
+}

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	- dateOptions = { dateStyle: 'full', timeStyle: 'medium' }
+
+		h1= title
+		<a href='/new'>New Message</a>
+		ul(class="messages")
+			each message in messages
+				li
+					p=message.user
+					p=message.text
+					p=message.added.toLocaleString(undefined, dateOptions)
