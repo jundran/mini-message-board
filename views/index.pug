@@ -1,8 +1,7 @@
 extends layout
 
 block content
-	- dateOptions = { dateStyle: 'full', timeStyle: 'medium' }
-
+	- dateOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
 		h1= title
 		<a href='/new'>New Message</a>
 		ul(class="messages")
@@ -10,4 +9,4 @@ block content
 				li
 					p=message.user
 					p=message.text
-					p=message.added.toLocaleString(undefined, dateOptions)
+					p=message.added.toLocaleTimeString(undefined, dateOptions)
