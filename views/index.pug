@@ -1,12 +1,18 @@
 extends layout
 
 block content
-	- dateOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
-		h1= title
-		<a href='/new'>New Message</a>
-		ul(class="messages")
-			each message in messages
-				li
-					p=message.user
-					p=message.text
-					p=message.added.toLocaleTimeString(undefined, dateOptions)
+	h1= title
+	<a href='/new'>New Message</a>
+	ul(class="messages")
+		each message in messages
+			li
+				p=message.user
+				p=message.text
+				<p class='date'>#{message.added}</p>
+	script.
+		const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
+		document.querySelectorAll('.date')
+			.forEach(date =>
+				date.textContent = new Date(date.textContent)
+					.toLocaleTimeString(undefined, options)
+			)
