@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import expressApp from './app.js'
 
 function connectToMongoDB () {
-	dotenv.config({ path: './config.env' })
+	dotenv.config({ path: '../config.env' })
 	mongoose.connect(process.env.CONNECTION_STRING.replace('<password>', process.env.PASSWORD))
 		.then(db => console.log(`Connected to MongoDB on port ${db.connections[0].port}`))
 		.catch(error => console.log(error))

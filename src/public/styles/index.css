@@ -1,0 +1,61 @@
+.message {
+  border: 1px solid #999;
+  border-radius: 8px;
+  box-shadow: 1px 3px 5px #999;
+  padding: 16px 32px;
+  margin-bottom: 32px; }
+  .message .subject {
+    font-size: 1.2rem;
+    font-weight: 600; }
+  .message .text {
+    padding: 16px 0;
+    border-bottom: 1px solid teal; }
+  .message .footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: .8rem;
+    padding-top: 8px; }
+    .message .footer span {
+      font-weight: 600; }
+
+form li {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  margin-bottom: 32px; }
+
+form textarea {
+  height: 200px; }
+
+@media (max-width: 600px) {
+  form li {
+    grid-template-columns: 1fr; }
+    form li label {
+      margin-bottom: 8px; } }
+
+body {
+  width: 600px;
+  max-width: 95vw;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #224; }
+
+h1 {
+  color: teal; }
+
+p {
+  margin: 0;
+  word-wrap: break-word; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  color: inherit;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  padding: 16px;
+  margin: 16px 16px 16px 0;
+  border: 2px dotted #222; }

@@ -1,16 +1,18 @@
 extends layout
 
 block content
-	h1= title
+	h1= 'Mini Messageboard'
 	<a href='/new'>New Message</a>
 	ul(class="messages")
 		each message in messages
-			li
-				p=message.user
-				p=message.text
+			li(class='message')
+				<p class="subject">#{message.subject}</p>
+				<p class="text">#{message.text}</p>
+				<div class='footer'>
+					<p class="user">by <span>#{message.user}</span></p>
 				<p class='date'>#{message.added}</p>
 	script.
-		const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" }
+		const options = { month: "long", day: "numeric", hour: "numeric", minute: "numeric" }
 		document.querySelectorAll('.date')
 			.forEach(date =>
 				date.textContent = new Date(date.textContent)

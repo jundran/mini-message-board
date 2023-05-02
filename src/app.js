@@ -1,15 +1,14 @@
 import express from 'express'
-import path from 'path'
 import indexRouter from './routes/indexRouter.js'
 
 const app = express()
 
 // View engine setup
-app.set('views', path.resolve('views'))
+app.set('views', 'src/views')
 app.set('view engine', 'pug')
 
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static('public'))
+app.use(express.static('src/public'))
 app.use('/', indexRouter)
 
 app.use((req, res, next) => {

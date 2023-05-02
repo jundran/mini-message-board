@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1= 'New Message'
+	<form method="POST" action="/new">
+		ul
+			li
+				<label for="subject">Subject</label>
+				input(name="subject" id="subject" maxLength='50' required)
+			li
+				<label for="user">Author</label>
+				input(name="user" id="user" maxLength='20' required)
+			li
+				<label for="text">Message</label>
+				textarea(name="text" id="text" maxLength='1000' required)
+			<button>Submit</button>
+	</form>
+	<a href='/'>Cancel</a>
