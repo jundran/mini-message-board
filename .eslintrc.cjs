@@ -5,12 +5,12 @@ module.exports = {
 	'extends': [
 		'eslint:recommended'
 	],
-	'languageOptions': {
+	'parserOptions': {
 		'ecmaVersion': 'latest',
 		'sourceType': 'module'
 	},
 	'rules': {
-		"prefer-const": "error",
+		'prefer-const': 'error',
 		'indent': ['error','tab',{ 'SwitchCase': 1 }],
 		'linebreak-style': ['error','unix'],
 		'quotes': ['error','single'],
@@ -21,6 +21,6 @@ module.exports = {
 		'eol-last': ['error','always'],
 		'comma-dangle': ['error','never'],
 		'no-trailing-spaces': 'error',
-		'no-unused-vars': 'warn',
+		'no-unused-vars': ['warn', { 'argsIgnorePattern': 'next' }]
 	}
 }

@@ -12,6 +12,7 @@
 		"pug": "^3.0.2"
 	},
 	"devDependencies": {
+		"eslint": "^8.39.0",
 		"node-sass": "^8.0.0"
 	}
 }

@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-  console.log('Handling error')
+	console.log('Handling error')
 	console.error(err.stack)
 	res.status(500).end()
 })

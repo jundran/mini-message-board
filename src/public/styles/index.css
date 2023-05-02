@@ -18,6 +18,8 @@
     padding-top: 8px; }
     .message .footer span {
       font-weight: 600; }
+    .message .footer .date {
+      min-width: fit-content; }
 
 form li {
   display: grid;
