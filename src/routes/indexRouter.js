@@ -33,4 +33,3 @@ router.post('/new', (req, res, next) => {
 })
 
 export default router
-
